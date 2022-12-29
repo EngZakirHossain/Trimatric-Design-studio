@@ -93,7 +93,7 @@
                         <div class="col-6">
                             <span class="text-muted mb-3 lh-1 d-block text-truncate">Message</span>
                             <h4 class="mb-3">
-                                <span class="counter-value" data-target="{{$messages}}">0</span>M
+                                <span class="counter-value" data-target="{{$messages}}">0</span>
                             </h4>
                         </div>
                         <div class="col-6">

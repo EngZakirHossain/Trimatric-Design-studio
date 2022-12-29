@@ -6,7 +6,8 @@
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TDS | @yield('title')</title>
+    @php($name=\App\Model\Setting::where('key','name')->first()->value)
+    <title>{{$name}} | @yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->

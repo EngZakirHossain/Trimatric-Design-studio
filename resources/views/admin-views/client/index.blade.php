@@ -73,13 +73,58 @@
                                 <i class="bx bx-dots-horizontal-rounded"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Modify</a></li>
+                                <button type="button" class="btn btn-primary w-100 waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#clientModal{{$client['id']}}">
+                                    Edit
+                                </button>
                                 <li><a class="dropdown-item delete" id="{{$client['id']}}"> Delete </a></li>
                             </ul>
                         </div>
                     </td>
                 </tr>
-                @endforeach
+                <!-- Modal -->
+                <div class="modal fade" id="clientModal{{$client['id']}}" tabindex="-1" role="dialog" aria-labelledby="clientModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-top modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title font-size-16" id="clientModalTitle">Client Update</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{route('admin.client.update')}}" method="POST" enctype="multipart/form-data" >
+                                    @csrf
+                                    <div>
+                                        <input type="hidden" name="id" value="{{$client->id}}">
+                                        <div class="mb-3">
+                                            <input type="text" name="name" class="form-control"  value="{{$client->name}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="web" class="form-control" value="{{$client->web}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="address" class="form-control" value="{{$client->address}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <img id="addImg" style="height: 150px;width: 150px" class="img-vertical-150" src="{{asset('storage/backend/clients')}}/{{$client->logo}}" onerror="this.src='{{asset('backend/assets/images/placeholder.jpg')}}'">
+
+                                            <input type="file" name="logo" class="form-control" placeholder="logo" onchange="readURL(this);">
+                                            <label for="addImg">Client logo(Recommended: 300*300 px)<span class="text-danger">*</span></label>
+                                            @error ('logo')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit </button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
+
+            @endforeach
             </tbody>
         </table>
         <!-- end table -->
@@ -108,24 +153,23 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="">Client Logo Size(Recommended: 230*133 px)<span class="text-danger">*</span></label>
+                            <label for="">Client Logo Size(Recommended: 300*300 px)<span class="text-danger">*</span></label>
                             <input type="file" name="logo" class="form-control" placeholder="logo">
                             @error ('logo')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
-
-                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit </button>
                 </div>
+
                 </form>
             </div>
         </div>
     </div>
-    <!-- end modal -->
+    </div>
 
 @endsection
 @section('js')
@@ -169,4 +213,20 @@
             })
         });
     </script>
+            <script>
+                function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('#addImg')
+                                .attr('src', e.target.result)
+                                .width(300)
+                                .height(150);
+                        };
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+            </script>
 @endsection

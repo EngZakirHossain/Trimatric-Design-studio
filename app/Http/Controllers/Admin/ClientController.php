@@ -70,6 +70,29 @@ class ClientController extends Controller
         ]);
     }
 
+    public function update(Request $request){
+        $client = Client::where('id',$request->id)->first();
 
+        if($request->hasFile('logo')){
+            $path = ('storage/backend/clients/'); // upload path
+            $file_old = $path . $client->logo;
+            unlink($file_old);
+            //upload new file
+            $file = $request->logo;
+            $filename =$client->id.'_'.$request->name . '.'.$file->getClientOriginalExtension();
+            $file->move($path, $filename);
+            //for update in table
+            $client->update(['logo' => $filename]);
+        }else{
+            $client->update(['logo' => $client->logo]);
+        }
+        Client::where('id',$request->id)->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'web' => $request->web,
+        ]);
+
+        return back()->with('message','Client Updated Successfully');
+    }
 
 }

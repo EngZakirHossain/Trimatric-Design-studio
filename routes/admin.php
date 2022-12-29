@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
             Route::get('view', 'ClientController@index')->name('view');
             Route::post('addClient', 'ClientController@addNew')->name('add');
             Route::post('deleteClient', 'ClientController@delete')->name('delete');
+            Route::post('updateClient', 'ClientController@update')->name('update');
         });
         //Service Routes
         Route::group(['prefix' => 'service', 'as' => 'service.',], function () {
