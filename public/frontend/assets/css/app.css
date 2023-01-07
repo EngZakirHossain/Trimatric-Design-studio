@@ -162,6 +162,10 @@ ol.list-style li::marker {
     padding-left: 15px;
     padding-right: 15px;
 }
+.container-video{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .container {
@@ -3240,31 +3244,31 @@ Pagination
 .banner.banner-style-4 {
     background: -webkit-linear-gradient(left, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
     background: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-    padding: 310px 0 100px;
+    padding: 0px 0 0px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .banner.banner-style-4 {
-        padding: 250px 0 100px;
+        padding: 0px 0 0px;
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .banner.banner-style-4 {
-        padding: 250px 0 100px;
+        padding: 0px 0 0px;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .banner.banner-style-4 {
-        padding: 180px 0 80px;
+        padding: 0px 0 0px;
         min-height: 100%;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .banner.banner-style-4 {
-        padding: 150px 0 60px;
+        padding: 0px 0 0px;
     }
 }
 
@@ -3344,24 +3348,33 @@ Pagination
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.banner.banner-style-4 .banner-thumbnail video {
+    height: auto;
+    width: 100%;
+    margin: 30% 0% 0% 0%;
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .banner.banner-style-4 .banner-thumbnail {
-        right: -300px;
+        right: -0px;
     }
 
-    .banner.banner-style-4 .banner-thumbnail img {
-        width: 85%;
+    .banner.banner-style-4 .banner-thumbnail video {
+        height: auto;
+        width: 100%;
+        margin: 21% 0% 0% 0%;
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .banner.banner-style-4 .banner-thumbnail {
-        right: -570px;
+        right: 0px;
     }
 
-    .banner.banner-style-4 .banner-thumbnail img {
-        width: 60%;
+    .banner.banner-style-4 .banner-thumbnail video {
+        height: auto;
+        width: 100%;
+        margin: 60% 0% 0% 0%;
     }
 }
 
@@ -3372,17 +3385,24 @@ Pagination
         -ms-transform: translateY(0);
         transform: translateY(0);
         text-align: center;
-        margin: -20px 0 20px;
+        margin: 0px 0 0px;
     }
 
-    .banner.banner-style-4 .banner-thumbnail img {
+    .banner.banner-style-4 .banner-thumbnail video {
+        height: auto;
         width: 100%;
+        margin: 19% 0% -15% 0%;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .banner.banner-style-4 .banner-thumbnail {
-        margin: 0 0 20px;
+        margin: 0px;
+    }
+    .banner.banner-style-4 .banner-thumbnail video {
+        height: auto;
+        width: 100%;
+        margin: 25% 0% -8% 0%;
     }
 }
 
@@ -10012,24 +10032,34 @@ Pagination
 }
 
 .section-padding-equal {
-    padding: 95px 0;
+    padding: 50px;
+    margin-top: 380px;
 }
 
 @media only screen and (max-width: 1199px) {
     .section-padding-equal {
-        padding: 100px 0;
+        padding: 50px 0;
+        margin-top: 60px;
+    }
+}
+@media only screen and (max-width: 1599px) {
+    .section-padding-equal {
+        padding: 35px 0;
+        margin-top: 60px;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .section-padding-equal {
         padding: 80px 0;
+        margin-top: 100px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .section-padding-equal {
-        padding: 60px 0;
+        padding: 30px 0;
+        margin-top: 15px;
     }
 }
 
