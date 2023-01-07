@@ -49,6 +49,7 @@ class WebController extends Controller
             'email' => 'required',
             'phone' => 'required',
             'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         Message::create([

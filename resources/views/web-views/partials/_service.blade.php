@@ -1,6 +1,6 @@
 <!--=        Service Area Start         =-->
 <!--=====================================-->
-<section class="section section-padding-equal bg-color-dark">
+<section class="section section-padding-equal-banner bg-color-dark">
     <div class="container">
         <div class="section-heading heading-light-left">
             <span class="subtitle">What We Can Do For You</span>

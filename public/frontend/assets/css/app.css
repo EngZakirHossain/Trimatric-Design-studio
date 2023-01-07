@@ -10031,9 +10031,9 @@ Pagination
     }
 }
 
+
 .section-padding-equal {
     padding: 50px;
-    margin-top: 380px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -10058,6 +10058,37 @@ Pagination
 
 @media only screen and (max-width: 767px) {
     .section-padding-equal {
+        padding: 30px 0;
+        margin-top: 15px;
+    }
+}
+
+.section-padding-equal-banner {
+    padding: 50px;
+    margin-top: 380px;
+}
+@media only screen and (max-width: 1199px) {
+    .section-padding-equal-banner {
+        padding: 50px 0;
+        margin-top: 60px;
+    }
+}
+@media only screen and (max-width: 1599px) {
+    .section-padding-equal-banner {
+        padding: 35px 0;
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .section-padding-equal-banner {
+        padding: 80px 0;
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .section-padding-equal-banner {
         padding: 30px 0;
         margin-top: 15px;
     }

@@ -16,12 +16,6 @@
             </div>
         </div>
         <ul class="shape-group-8 list-unstyled">
-            {{--            <li class="shape shape-1" data-sal="slide-right" data-sal-duration="500" data-sal-delay="100">--}}
-            {{--                <img src="{{asset('frontend/assets/media/others/bubble-9.png')}}" alt="Bubble">--}}
-            {{--            </li>--}}
-{{--            <li class="shape shape-2" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">--}}
-{{--                <img src="{{asset('frontend/assets/media/others/bubble-21.png')}}" alt="Bubble">--}}
-{{--            </li>--}}
         </ul>
     </div>
     <!--=====================================-->
@@ -51,6 +45,14 @@
                             <div class="form-group mb--40">
                                 <label>How can we help you? *</label>
                                 <textarea name="message" id="contact-message" class="form-control textarea" cols="30" rows="4" required></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="axil-btn btn-fill-primary btn-fluid btn-primary">Get In Touch</button>
