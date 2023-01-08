@@ -14,7 +14,7 @@
             <div class="customer-logos slider" data-sal="slide-up" data-sal-duration="500">
                 <div class="owl-carousel">
                     @foreach($clients as $key=>$row)
-                        <div class="p-2"><img style="height:200px; width:200px; " src="{{asset('storage/backend/clients')}}/{{$row['logo']}}" alt="{{$row->name}}"></div>
+                        <div class="p-2"><img src="{{asset('storage/backend/clients')}}/{{$row['logo']}}" alt="{{$row->name}}"></div>
                     @endforeach
                 </div>
             </div>

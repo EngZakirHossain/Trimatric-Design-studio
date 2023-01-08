@@ -29,7 +29,7 @@
                 @foreach($clients as $key=>$row)
                     <div class="col-lg-2 col-4" data-sal="slide-up" data-sal-duration="500">
                         <div>
-                            <img style="width:150px;height:150px" onerror="this.src='{{asset('backend/assets/images/users/avatar-2.jpg')}}'"
+                            <img onerror="this.src='{{asset('backend/assets/images/users/avatar-2.jpg')}}'"
                                  src="{{asset('storage/backend/clients')}}/{{$row['logo']}}"  alt="{{$row->name}}">
                         </div>
                     </div>

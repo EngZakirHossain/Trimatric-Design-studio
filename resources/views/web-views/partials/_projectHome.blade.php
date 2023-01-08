@@ -32,7 +32,7 @@
                                           $extension = substr($file_name, strrpos($file_name, '.') + 1);
                                     @endphp
                                     @if($extension == 'mp4')
-                                        <video autoplay muted loop style="height: 310px; width:410px" >
+                                        <video autoplay muted loop >
                                             <source src="{{asset('storage/backend/profile')}}/{{$services->name}}/{{$profile->name}}/{{$profile['featureImage']}}" type="video/mp4" alt="{{$profile->name}}">
                                         </video>
                                     @else

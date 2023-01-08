@@ -9,10 +9,12 @@
                 <div class="header-logo">
                     @php($logo=\App\Model\Setting::where('key','logo')->first()->value)
 
-                    <a href="{{route('home')}}"><img id="addImg" class="light-version-logo" src="{{asset('storage/company')}}/{{$logo}}"
-                                                     onerror="this.src='{{asset('frontend/assets/media/footer.png')}}'"></a>
-                    <a href="{{route('home')}}"><img id="addImg" class="sticky-logo" src="{{asset('storage/company')}}/{{$logo}}"
-                                                     onerror="this.src='{{asset('frontend/assets/media/footer.png')}}'"></a><br>
+                    <a href="{{route('home')}}">
+                        <img id="addImg" class="light-version-logo" src="{{asset('storage/company')}}/{{$logo}}"
+                                                     onerror="this.src='{{asset('frontend/assets/media/footer.png')}}'">
+                        <img id="addImg" class="sticky-logo" src="{{asset('storage/company')}}/{{$logo}}"
+                             onerror="this.src='{{asset('frontend/assets/media/footer.png')}}'">
+                    </a>
                 </div>
                 <div class="header-main-nav">
                     <!-- Start Mainmanu Nav -->
