@@ -41,10 +41,10 @@
                                     </div>
                                     <div class="mb-3">
                                         @php($logo=\App\Model\Setting::where('key','logo')->first()->value)
-                                        <img id="addImg" style="height: 150px;width: 150px" class="img-vertical-150" src="{{asset('storage/company')}}/{{$logo}}" onerror="this.src='{{asset('backend/assets/images/placeholder.jpg')}}'">
+                                        <img id="addImg" style="height: 100px;width: 200px" class="img-vertical-150" src="{{asset('storage/company')}}/{{$logo}}" onerror="this.src='{{asset('backend/assets/images/placeholder.jpg')}}'">
 
                                         <input type="file" name="logo" class="form-control" placeholder="logo" onchange="readURL(this);">
-                                        <label for="addImg">Company logo(Recommended: 150*150 px)<span class="text-danger">*</span></label>
+                                        <label for="addImg">Company logo(Recommended: 100*200 px)<span class="text-danger">*</span></label>
                                         @error ('logo')
                                         <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -99,8 +99,8 @@
                 reader.onload = function (e) {
                     $('#addImg')
                         .attr('src', e.target.result)
-                        .width(300)
-                        .height(150);
+                        .width(200)
+                        .height(100);
                 };
 
                 reader.readAsDataURL(input.files[0]);

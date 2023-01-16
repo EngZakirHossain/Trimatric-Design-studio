@@ -64,6 +64,7 @@
                     <div class="contact-info mb--100 mb_md--10 mt_md--0">
                         <h4 class="title">Address</h4>
                         <h4 class="address">Boro Moghbazar, 125 Mezonet Building, Ramna Century Ave, Dhaka 1217</h4>
+
                     </div>
                     <div class="contact-info mb--10">
                         <h4 class="title">Phone</h4>
@@ -74,16 +75,15 @@
                 </div>
             </div>
         </div>
-{{--        <ul class="list-unstyled shape-group-12">--}}
-{{--            <li class="shape shape-1"><img src="{{asset('frontend/assets/media/others/bubble-2.png')}}" alt="Bubble"></li>--}}
-{{--            <li class="shape shape-2"><img src="{{asset('frontend/assets/media/others/bubble-1.png')}}" alt="Bubble"></li>--}}
-{{--            <li class="shape shape-3"><img src="{{asset('frontend/assets/media/others/circle-3.png')}}" alt="Circle"></li>--}}
-{{--        </ul>--}}
+
     </section>
 
     <!--=====================================-->
     <!--=       Location  Area Start        =-->
     <!--=====================================-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.013940115085!2d90.4084152!3d23.746882300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaac9de283edc8ad5%3A0xa309339158ab4cb2!2sTrimatric%20Design%20Studio!5e0!3m2!1sen!2sbd!4v1673851811469!5m2!1sen!2sbd"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     <section class="section section-padding bg-color-dark overflow-hidden">
         <div class="container">
             <div class="section-heading heading-light-left">
